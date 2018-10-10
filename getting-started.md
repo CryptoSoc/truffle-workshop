@@ -16,6 +16,20 @@ npm install -g truffle
 Once Ganache is downloaded, start your own local blockchain by simply opening it. You will see several Ethereum accounts with some test Ether that you will use to interact with your contracts.
 
 
+## The Development Process
+
+- Start by thinking of the problem and how you are going to solve it
+
+- Once your team has decided and agreed, think how the smart contract should look before even beginning coding. 
+    - When writing smart contracts, most of your time should be spent on thinking about the contract and not coding it. The code is not long but the possibility for failure is in some ways greater than in regular programs. This is particularly necessary when the contract is financial.
+    - More about [smart contract security](https://solidity.readthedocs.io/en/latest/security-considerations.html)
+
+- Start writing the first iteration of your smart contract using [Remix](https://remix.ethereum.org). The compiler assistance is seriously great and it takes no setup.
+
+- Once you have something that more or less works, throw it into truffle and set up a front end to interact with the contract.
+
+- Iterate
+
 
 
 ## Troubleshooting
