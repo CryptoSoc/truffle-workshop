@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron, Button } from 'react-bootstrap';
+import { Jumbotron, Button, Image } from 'react-bootstrap';
 import WorkshopRegisterContract from "./contracts/WorkshopRegister.json";
 import getWeb3 from "./utils/getWeb3";
 import truffleContract from "truffle-contract";
@@ -23,10 +23,12 @@ class App extends Component {
       const Contract = truffleContract(WorkshopRegisterContract);
       Contract.setProvider(web3.currentProvider);
       const instance = await Contract.deployed();
+      const response = await instance.checkRegister(accounts[0]);
+      console.log(response);
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance });
+      this.setState({ web3, accounts, contract: instance, signed: response });
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -80,13 +82,18 @@ class App extends Component {
         </Jumbotron>
         <div>
           {signed ? (
-            <p>
-              You haven't signed the register yet!
-            </p>
+            <div>
+              <p>
+                You haven't signed the register yet!
+              </p>
+            </div>
           ) : (
-            <p>
-              Thanks for signing!
-            </p>
+            <div>
+              <p>
+                Vitalik thanks you for signing!
+              </p>
+              <Image source="./img/vitalik.gif" />
+            </div>
           )}
 
         </div>
