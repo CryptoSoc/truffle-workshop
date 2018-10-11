@@ -26,4 +26,14 @@ contract WorkshopRegister {
   function checkRegister(address myAddress) public view returns (bool) {
     return register[myAddress];
   }
+
+
+  // A payable function that would tip the contract i.e. no-one
+  // This has nothing to do with the register and is added 
+  // for additional functionality. There is currently nothing connected
+  // to this on the front end either.
+
+  // function tip() public payable {
+  //   Implement this
+  // }
 }
