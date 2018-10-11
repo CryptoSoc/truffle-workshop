@@ -68,7 +68,7 @@ Make sure Metamask is configured to the Ganache network. [See how to here](#set-
 
 ## Getting Started
 
-One person can fork this repo: #INSERT-EDITED-PET-SHOP 
+One person can fork this repo: https://github.com/CryptoSoc/truffle-workshop
 and give all team members permission to push.
 
 Send the link to your repo to your team-mates.
