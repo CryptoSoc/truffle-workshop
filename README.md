@@ -133,7 +133,7 @@ If Metamask transactions to the contract fail with the error:
 ```
 Error: the transaction doesn't have the correct nonce
 ```
-Disconnect from the Ganache blockchain by connecting to Ropsten. Then reconnect to Ganache.
+Disconnect from the Ganache blockchain by connecting to Ropsten. Then reconnect to Ganache. Or go to settings in Metamask and click reset to delete the incorrect history that Metamask has saved.
 
 
 #### Find Something You're Unfamiliar with?
@@ -141,7 +141,7 @@ Disconnect from the Ganache blockchain by connecting to Ropsten. Then reconnect 
 Look through (or review) the [Pet-Shop tutorial](https://www.truffleframework.com/tutorials/pet-shop).
 
 
-## Set up MetaMask
+### Set up MetaMask
 
 From the [Pet Shop tutorial]()
 
