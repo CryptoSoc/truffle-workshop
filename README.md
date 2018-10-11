@@ -69,7 +69,10 @@ Make sure Metamask is configured to the Ganache network. [See how to here](#set-
 ## Getting Started
 
 One person can fork this repo: https://github.com/CryptoSoc/truffle-workshop
-and give all team members permission to push.
+and give all team members permission to push. Or use the truffle box and set a new remote for it.
+
+If you fork the repo, you will keep more of the git stuff which is probably better, but you must run `cd client && npm run link-contracts` to after compiling the smart contracts. This is automatically done with Truffle.
+
 
 Send the link to your repo to your team-mates.
 
