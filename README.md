@@ -5,14 +5,52 @@ In this workshop we will be taking a quick look at building a DApp, and then we 
 The challenge is, in your groups, identify an idea and implement an MVP DApp. Each member of the group must make at least 1 commit to the repo.
 
 
+## How to Use this Box
+
+There are a few technical requirements before we start. Please install the following:
+
+*   [Metamask](https://metamask.io/) - a browser extension Ethereum wallet
+*   [Ganache](http://truffleframework.com/ganache) - personal blockchain for Ethereum
+*   [Node.js v6+ LTS and npm](https://nodejs.org/en/) - javascript modules
+*   [Git](https://git-scm.com/) - version control
+
+Once Ganache is downloaded, start your own local blockchain by simply opening it. You will see several Ethereum accounts with some test Ether that you will use to interact with your contracts.
+
+![](/img/ganache_initial.png)
+
+Once we have those installed, we only need one command to install Truffle:
+
+```shell
+npm install -g truffle
+```
+
+Then download and install this Truffle box:
+```sh
+truffle unbox CryptoSoc/truffle-workshop
+```
+
+Compile and migrate the smart contracts ([Read more about this](#Pet shop)): 
+```sh
+truffle compile
+truffle migrate
+```
+
+Install the dependencies for the react app and start the server:
+```sh
+cd client
+npm install
+npm run start
+```
+
+Make sure Metamask is configured to the Ganache network. [See how to here](#set-up-metamask)
+
+
 ## Getting Started
 
 One person can fork this repo: #INSERT-EDITED-PET-SHOP 
 and give all team members permission to push.
 
-
 Send the link to your repo to your team-mates.
-
 
 Each person should work on a separate branch to avoid a conflict nightmare. You can simply use your name as your branch name.
 
@@ -20,13 +58,10 @@ Each person should work on a separate branch to avoid a conflict nightmare. You 
 git checkout -b your-branch-name
 ```
 
-
 Then when you have coded something:
-
 ```
 git push -u origin your-branch-name
 ```
-
 
 Work together to make something interesting!
 
@@ -39,26 +74,6 @@ A few ideas that might inspire you:
 - Crypto-*insert-animated-object-here*
 - Donate to charity
 - Bet on the world cup
-
-
-
-### Setting up the development environment
-
-There are a few technical requirements before we start. Please install the following:
-
-*   [Node.js v6+ LTS and npm](https://nodejs.org/en/) - javascript modules
-*   [Git](https://git-scm.com/)
-*   [Metamask](https://metamask.io/) - a browser extension Ethereum wallet
-*   [Ganache](http://truffleframework.com/ganache) - personal blockchain for Ethereum
-
-Once we have those installed, we only need one command to install Truffle:
-
-```shell
-npm install -g truffle
-```
-
-Once Ganache is downloaded, start your own local blockchain by simply opening it. You will see several Ethereum accounts with some test Ether that you will use to interact with your contracts.
-
 
 ### The Development Process
 
@@ -94,4 +109,55 @@ If Metamask transactions to the contract fail with the error:
 ```
 Error: the transaction doesn't have the correct nonce
 ```
-Disconnect from the Ganache blockchain by connecting to Ropsten. Then Reconnect to Ganache.
+Disconnect from the Ganache blockchain by connecting to Ropsten. Then reconnect to Ganache.
+
+
+## Set up MetaMask
+
+From the [Pet Shop tutorial]()
+
+The easiest way to interact with our dapp in a browser is through [MetaMask](https://metamask.io/), a browser extension for both Chrome and Firefox.
+
+1. Install MetaMask in your browser.
+
+1. Once installed, you'll see the MetaMask fox icon next to your address bar. Click the icon and you'll see this screen appear:
+
+   ![Privacy Notice](/img/metamask-privacy.png "Privacy Notice")
+
+1. Click Accept to accept the Privacy Notice.
+
+1. Then you'll see the Terms of Use. Read them, scrolling to the bottom, and then click **Accept** there too.
+
+   ![Terms](/img/metamask-terms.png "Terms of Use")
+
+1. Now you'll see the initial MetaMask screen. Click **Import Existing DEN**.
+
+   ![Initial screen](/img/metamask-initial.png "MetaMask initial screen")
+
+1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
+
+   <p class="alert alert-danger">
+   **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
+   </p>
+
+   Enter a password below that and click **OK**.
+
+   ![MetaMask seed phrase](/img/metamask-seed.png "MetaMask seed phrase")
+
+1. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
+
+   ![MetaMask network menu](/img/metamask-networkmenu.png "MetaMask network menu")
+
+1. In the box titled "New RPC URL" enter `http://127.0.0.1:7545` and click **Save**.
+
+   ![MetaMask Custom RPC](/img/metamask-customrpc.png "MetaMask Custom RPC")
+
+   The network name at the top will switch to say "Private Network".
+
+1. Click the left-pointing arrow next to "Settings" to close out of the page and return to the Accounts page.
+
+   Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
+
+   ![MetaMask account configured](/img/metamask-account1.png "MetaMask account configured")
+
+   Configuration is now complete.
