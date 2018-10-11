@@ -1,4 +1,48 @@
-## Setting up the development environment
+# Workshop 2
+
+In this workshop we will be taking a quick look at building a DApp, and then we will let you take over and build one yourself. 
+
+The challenge is, in your groups, identify an idea and implement an MVP DApp. Each member of the group must make at least 1 commit to the repo.
+
+
+## Getting Started
+
+One person can fork this repo: #INSERT-EDITED-PET-SHOP 
+and give all team members permission to push.
+
+
+Send the link to your repo to your team-mates.
+
+
+Each person should work on a separate branch to avoid a conflict nightmare. You can simply use your name as your branch name.
+
+```
+git checkout -b your-branch-name
+```
+
+
+Then when you have coded something:
+
+```
+git push -u origin your-branch-name
+```
+
+
+Work together to make something interesting!
+
+### Ideas
+
+A few ideas that might inspire you:
+
+- Cape Town water vouchers.
+- Your own token
+- Crypto-*insert-animated-object-here*
+- Donate to charity
+- Bet on the world cup
+
+
+
+### Setting up the development environment
 
 There are a few technical requirements before we start. Please install the following:
 
@@ -16,7 +60,7 @@ npm install -g truffle
 Once Ganache is downloaded, start your own local blockchain by simply opening it. You will see several Ethereum accounts with some test Ether that you will use to interact with your contracts.
 
 
-## The Development Process
+### The Development Process
 
 - Start by thinking of the problem and how you are going to solve it
 
@@ -32,9 +76,9 @@ Once Ganache is downloaded, start your own local blockchain by simply opening it
 
 
 
-## Troubleshooting
+### Troubleshooting
 
-### Compiling or Migrating Contracts
+#### Compiling or Migrating Contracts
 
 If you get the error when compiling or migrating your contracts:
 ```
@@ -44,7 +88,7 @@ Error: Attempting to run transaction which calls a contract function, but recipi
 Try delete the contracts folder in the build directory and rerun `compile` and `migrate`.
 
 
-### Metamask Transactions Fail with Incorrect Nonce
+#### Metamask Transactions Fail with Incorrect Nonce
 
 If Metamask transactions to the contract fail with the error:
 ```
