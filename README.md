@@ -24,18 +24,33 @@ Once we have those installed, we only need one command to install Truffle:
 npm install -g truffle
 ```
 
-Then download and install this Truffle box:
+**Creating a Truffle project using a Truffle Box**
+
+Truffle initializes in the current directory, so first create a directory in your development folder of choice and then moving inside it.
+
+```shell
+mkdir CryptoSoc-Workshop
+
+cd CryptoSoc-Workshop
+```
+
+We've created a special [Truffle Box](/boxes) just for this tutorial called `truffle-workshop`, which includes the basic project structure as well as code for the user interface. Use the `truffle unbox` command to unpack this Truffle Box. You cn use this as a templates in hackathons or for ideas you may want to try out.
+
 ```sh
 truffle unbox CryptoSoc/truffle-workshop
 ```
 
-Compile and migrate the smart contracts ([Read more about this](#Pet shop)): 
+**Build and Run the App**
+
+Compile and migrate the smart contracts ([Read more about this](#Pet shop)):
+
 ```sh
 truffle compile
 truffle migrate
 ```
 
 Install the dependencies for the react app and start the server:
+
 ```sh
 cd client
 npm install
