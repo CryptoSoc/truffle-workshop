@@ -4,6 +4,12 @@ In this workshop we will be taking a quick look at building a DApp, and then we 
 
 The challenge is, in your groups, identify an idea and implement an MVP DApp. Each member of the group must make at least 1 commit to the repo.
 
+The rest of the tutorial will help set up a React DApp with Truffle.
+- [React Docs](https://reactjs.org/docs/getting-started.html)
+- [Solidity v0.4.24 Docs](https://solidity.readthedocs.io/en/v0.4.24/)
+
+Thanks to [Pet-shop](https://github.com/truffle-box/pet-shop-box) and [react box](https://github.com/truffle-box/react-box).
+
 
 ## How to Use this Box
 
