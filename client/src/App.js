@@ -23,12 +23,11 @@ class App extends Component {
       const Contract = truffleContract(WorkshopRegisterContract);
       Contract.setProvider(web3.currentProvider);
       const instance = await Contract.deployed();
-      const response = await instance.checkRegister(accounts[0]);
-      console.log(response);
+      let initialResponse = await instance.checkRegister(accounts[0]);
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance, signed: response });
+      this.setState({ web3, accounts, contract: instance, signed: initialResponse });
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -47,7 +46,8 @@ class App extends Component {
     await contract.signRegister( { from: accounts[0] });
 
     // Check you signed the register to prove it worked.
-    const response = await contract.checkRegister(accounts[0]);
+    let response = await contract.checkRegister(accounts[0]);
+    console.log(response);
 
     // Update state with the result.
     this.setState({
@@ -56,8 +56,9 @@ class App extends Component {
     })
   };
 
+  // The front end
   render() {
-    const { isLoading, signed } = this.state;
+    const { isLoading } = this.state;
 
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract. Make sure Metamask is unlocked and connected to the Ganache network.</div>;
@@ -81,18 +82,18 @@ class App extends Component {
           </p>
         </Jumbotron>
         <div>
-          {signed ? (
+          {this.state.signed ? (
             <div>
               <p>
-                You haven't signed the register yet!
+                <strong>Vitalik thanks you for signing!</strong>
               </p>
+              <Image src="https://beta.techcrunch.com/wp-content/uploads/2017/09/unnamed.gif" />
             </div>
           ) : (
             <div>
               <p>
-                Vitalik thanks you for signing!
+                You haven't signed the register yet!
               </p>
-              <Image source="./img/vitalik.gif" />
             </div>
           )}
 
