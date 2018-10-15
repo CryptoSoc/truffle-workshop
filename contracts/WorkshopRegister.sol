@@ -9,16 +9,37 @@ pragma solidity ^0.4.24;
 
 // Sign the digital register for the Cryptosoc workshops
 contract WorkshopRegister {
+  uint workshopCost;
 
-  // a mapping is an efficient data structure that can map every possible
+    // a mapping is an efficient data structure that can map every possible
   // thing to something else - in this case, addresses to booleans
   mapping(address => bool) private register;
 
+  // An event that will emit when someone has attended
+  event Signed(address _attendee);
+
+  // A constructor that sets up the Workshop parameters
+  // in this case, the cost of the workshop
+  constructor (uint costInEther) public {
+    workshopCost = costInEther;
+  }
 
   // Add your address as your signature to the register
   function signRegister() public {
     address signature = msg.sender;
     register[signature] = true;
+  }
+
+
+  // Add your address as your signature to the register for a payed workshop
+  function signRegisterPayed() public payable {
+    require(msg.value >= workshopCost);
+
+    address signature = msg.sender;
+    register[signature] = true;
+
+    // Emit an event on success
+    emit Signed(msg.sender);
   }
 
 
