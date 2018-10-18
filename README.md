@@ -190,3 +190,56 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
    ![MetaMask account configured](/img/metamask-account1.png "MetaMask account configured")
 
    Configuration is now complete.
+
+
+## Deploying your DApp
+
+We'll look at how to deploy your smart contract to an Ethereum test network, which functions almost the exact same as the Mainnet, and how to connect your front end to it. For this part, we will be using [Heroku]() and the Ropsten testnet. 
+
+### Deploying your smart contract
+
+Deploying your smart contract is actually fairly easy. You can simply copy the smart contract code into Remix, and inject the Ropsten testnet using Metamask. Then when you click deploy, your smart contract will go live on the Ropsten testnet. Let's see how this works:
+
+#### Claim some Testnet ETH
+
+A testnet is a development environment. That means the ETH you have is worth nothing. If you don't need all of it, donate it back to a faucet. 
+
+To create any transaction on Ethereum, you will need some ETH to cover the gas costs. You can get some free testnet ETH from the links below - you only need 1 ETH.
+
+Don't send lots of transactions. We want you to try get the hang of participating in the Ethereum network and seeing what it's about but there are still maintainers who don't want to see all your spam transactions. In fact Ropsten was already DOS'ed. 
+
+Make sure Metamask is connected to the Ropsten testnet.
+
+Claim some testnet ETH from these faucets:
+- https://faucet.metamask.io/
+- https://faucet.kyber.network/
+- http://faucet.ropsten.be:3001/
+
+#### Head to Remix
+
+Open [Remix](https://remix.ethereum.org) and paste your smart contract in. If you use any other dependencies, you can put them into separate files and import them from you main smart contract.
+
+Compile your smart contract as per usual and go to the `run` tab.
+
+In the `run` tab, change the environment to `Injected Web3`. Make sure you are connected to the Ropsten testnet environment.
+
+Click deploy like before, providing any constructor arguments your smart contract might have.
+
+![deploy to ropsten](./img/ropsten_tx.png)
+
+The transaction will then have to be mined. This can take a little while if the network is busy but will be done within a minute.
+
+Once that is done, you will find the same debug information in the console. 
+
+![Debug information](./img/ropsten_debug_info.png)
+
+Additionally there is a link to view the transaction created on the Etherscan block explorer:
+
+![Ropsten Etherscan](./img/ropsten_etherscan.png)
+
+Before you continue, you should note down the address of your smart contract so that you don't lose it into the Ether...
+
+Now you can interact with your contract via the usual methods from Remix or any other wallet. For example, you could interact with the contract from [MyEtherWallet](https://www.myetherwallet.com/#contracts)
+
+![Interact MyEtherWallet](./img/interact_mew.png)
+
