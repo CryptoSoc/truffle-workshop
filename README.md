@@ -250,3 +250,39 @@ Now you can interact with your contract via the usual methods from Remix or any 
 
 ![Interact MyEtherWallet](./img/interact_mew.png)
 
+### Deploying your Front End
+
+To deploy your front end, we will use a simple platform-as-a-service called [Heroku](https://heroku.com). You can create one project for free as a hobbyist so go ahead and create an account.
+
+Uploading your code is fairly simple and acts the same as pushing it to GitHub. 
+
+- [Install the command line tool](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
+
+- Create the remote application on Heroku. This will add a git remote called `heroku` to your current repo.
+
+```sh
+heroku create
+```
+
+- Deploy your code like you would push to GitHub and start one instance
+
+```sh
+git push heroku master
+heroku ps:scale web=1
+```
+
+- You can view your app by typing
+
+```sh
+heroku open
+```
+
+- To update your app, simply commit your latest changes and push them to heroku
+
+```sh
+git push heroku master
+```
+
+### View the example 
+
+You can view the live demo here: https://floating-everglades-30489.herokuapp.com/
