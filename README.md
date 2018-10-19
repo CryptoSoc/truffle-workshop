@@ -192,6 +192,13 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
    Configuration is now complete.
 
 
+#### Problems with MetaMask Events
+
+If you want to use events in your front end, Metamask is not currently sufficient - but there is a [bleeding edge solution](https://github.com/MetaMask/metamask-extension/pull/5458) to this which has very recently been merged. If you want to use events before Metamask is updated, try using the [Ethereum browser, Mist](https://github.com/ethereum/mist).
+
+Furthermore, there are some interesting issues with web3 as well, where sometimes things work one way and sometimes another. This seems to happen when changing between my local Ganache and Ropsten and might be explained by the divergent syntax of web3 0.x.x and 1.x.x. 
+
+
 ## Deploying your DApp
 
 We'll look at how to deploy your smart contract to an Ethereum test network, which functions almost the exact same as the Mainnet, and how to connect your front end to it. For this part, we will be using [Heroku]() and the Ropsten testnet. 
