@@ -196,7 +196,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
 If you want to use events in your front end, Metamask is not currently sufficient - but there is a [bleeding edge solution](https://github.com/MetaMask/metamask-extension/pull/5458) to this which has very recently been merged. If you want to use events before Metamask is updated, try using the [Ethereum browser, Mist](https://github.com/ethereum/mist).
 
-Furthermore, there are some interesting issues with web3 as well, where sometimes things work one way and sometimes another. This seems to happen when changing between my local Ganache and Ropsten and might be explained by the divergent syntax of web3 0.x.x and 1.x.x. 
+Furthermore, there are some interesting issues with web3 as well, where sometimes things work one way and sometimes another. This seems to happen when changing between my local Ganache and Ropsten and might be explained by the divergent syntax of web3 [0.x.x](https://github.com/ethereum/wiki/wiki/JavaScript-API) and [1.x.x](https://web3js.readthedocs.io/en/1.0/web3-eth.html). 
 
 
 ## Deploying your DApp
@@ -264,9 +264,13 @@ Uploading your code is fairly simple and acts the same as pushing it to GitHub.
 heroku create
 ```
 
-- Deploy your code like you would push to GitHub and start one instance
+- Deploy your front end code like you would push to GitHub and start one instance
 
 ```sh
+cd client/
+git add -A
+git commit -m "message"
+
 git push heroku master
 heroku ps:scale web=1
 ```
@@ -286,3 +290,9 @@ git push heroku master
 ### View the example 
 
 You can view the live demo here: https://floating-everglades-30489.herokuapp.com/
+
+### Procfile
+
+A Procfile is a configuration file for Heroku. For our build, we don't need to specify this as the default for node is to run the application. If you require more complex build options you can add one.
+
+[See here](https://devcenter.heroku.com/articles/procfile)
