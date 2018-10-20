@@ -1,4 +1,6 @@
-# Workshop 2
+# Truffle Workshop: Ropsten Deployments
+
+> This is the branch that has deployed the application to the Ropsten testnet. It uses web3 v1.x.x.
 
 In this workshop we will be taking a quick look at building a DApp, and then we will let you take over and build one yourself. 
 
