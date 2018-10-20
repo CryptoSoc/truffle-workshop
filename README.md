@@ -1,4 +1,4 @@
-# Workshop 2
+# DApp Workshop
 
 In this workshop we will be taking a quick look at building a DApp, and then we will let you take over and build one yourself. 
 
@@ -143,7 +143,7 @@ Look through (or review) the [Pet-Shop tutorial](https://www.truffleframework.co
 
 ### Set up MetaMask
 
-From the [Pet Shop tutorial]()
+From the [Pet Shop tutorial](https://www.truffleframework.com/tutorials/pet-shop)
 
 The easiest way to interact with our dapp in a browser is through [MetaMask](https://metamask.io/), a browser extension for both Chrome and Firefox.
 
@@ -201,7 +201,7 @@ Furthermore, there are some interesting issues with web3 as well, where sometime
 
 ## Deploying your DApp
 
-We'll look at how to deploy your smart contract to an Ethereum test network, which functions almost the exact same as the Mainnet, and how to connect your front end to it. For this part, we will be using [Heroku]() and the Ropsten testnet. 
+We'll look at how to deploy your smart contract to an Ethereum test network, which functions almost the exact same as the Mainnet, and how to connect your front end to it. For this part, we will be using [Heroku](https://www.heroku.com/) and the Ropsten testnet. 
 
 ### Deploying your smart contract
 
