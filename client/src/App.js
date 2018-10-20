@@ -22,14 +22,14 @@ class App extends Component {
 
       // Remix Deployment to Ropsten
       // Ropsten deployment: 0xe796a950fb501d8341d2c5209ac3b0cad21e1fa6
-      // var instance = new web3.eth.Contract(contractABI, "0xe796a950fb501d8341d2c5209ac3b0cad21e1fa6");
+      var instance = new web3.eth.Contract(contractABI, "0xe796a950fb501d8341d2c5209ac3b0cad21e1fa6");
 
       // Metamask deployment
-      const Contract = truffleContract(WorkshopRegisterContract);
-      Contract.setProvider(web3.currentProvider);
-      const instance = await Contract.deployed();
+      // const Contract = truffleContract(WorkshopRegisterContract);
+      // Contract.setProvider(web3.currentProvider);
+      // const instance = await Contract.deployed();
 
-      let initialResponse = await instance.checkRegister(accounts[0]);
+      let initialResponse = await instance.methods.checkRegister(accounts[0]).call();
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
@@ -46,9 +46,10 @@ class App extends Component {
     this.setState({ isLoading: true });
 
     // Sign the register
-    await contract.signRegister({ from: accounts[0] });
+    await contract.methods.signRegister().send({ from: accounts[0] });
+
     // Check you signed the register to prove it worked.
-    let response = await contract.checkRegister(accounts[0]);
+    let response = await contract.methods.checkRegister(accounts[0]).call();
     console.log(response);
 
     // Update state with the result.
