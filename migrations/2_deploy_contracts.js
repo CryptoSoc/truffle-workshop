@@ -4,5 +4,5 @@
 var WorkshopRegister = artifacts.require("./WorkshopRegister.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(WorkshopRegister);
+  deployer.deploy(WorkshopRegister, 0);
 };
