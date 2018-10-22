@@ -201,6 +201,8 @@ Furthermore, there are some interesting issues with web3 as well, where sometime
 
 ## Deploying your DApp
 
+For the tweaks to the front-end that connect to Ropsten, see the [Ropsten branch](https://github.com/CryptoSoc/truffle-workshop/tree/ropsten).
+
 We'll look at how to deploy your smart contract to an Ethereum test network, which functions almost the exact same as the Mainnet, and how to connect your front end to it. For this part, we will be using [Heroku](https://www.heroku.com/) and the Ropsten testnet. 
 
 ### Deploying your smart contract
@@ -254,7 +256,7 @@ Now you can interact with your contract via the usual methods from Remix or any 
 
 To deploy your front end, we will use a simple platform-as-a-service called [Heroku](https://heroku.com). You can create one project for free as a hobbyist so go ahead and create an account.
 
-Uploading your code is fairly simple and acts the same as pushing it to GitHub. 
+Uploading your code is fairly simple and acts the same as pushing it to GitHub.
 
 - [Install the command line tool](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
 
@@ -286,10 +288,6 @@ heroku open
 ```sh
 git push heroku master
 ```
-
-### View the example 
-
-You can view the live demo here: https://floating-everglades-30489.herokuapp.com/
 
 ### Procfile
 
