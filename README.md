@@ -48,7 +48,7 @@ truffle unbox CryptoSoc/truffle-workshop
 
 **Build and Run the App**
 
-Compile and migrate the smart contracts ([Read more about this](#Pet shop)):
+Compile and migrate the smart contracts ([Read more about this](#Pet shop)). Make sure Ganache is open.
 
 ```sh
 truffle compile
@@ -64,6 +64,10 @@ npm run start
 ```
 
 Make sure Metamask is configured to the Ganache network. [See how to here](#set-up-metamask)
+
+You should then be greeted with this:
+
+![App Landing Page](./img/app_landing.png)
 
 
 ## Getting Started
