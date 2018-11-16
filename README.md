@@ -1,5 +1,7 @@
 # DApp Workshop
 
+[![Build Status](https://travis-ci.org/CryptoSoc/truffle-workshop.svg?branch=master)](https://travis-ci.org/CryptoSoc/truffle-workshop)
+
 In this workshop we will be taking a quick look at building a DApp, and then we will let you take over and build one yourself. 
 
 The challenge is, in your groups, identify an idea and implement an MVP DApp. Each member of the group must make at least 1 commit to the repo.
