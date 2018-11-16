@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "lts/*"
+
+before_install:
+  - npm install -g truffle ganache-cli
+  - ganache-cli &
+  - truffle compile
+  - truffle migrate --network ci
+  - cd client
+
+before_script:
+  - npm run link-contracts
+
+script:
+  - npm test
