@@ -42,7 +42,7 @@ mkdir CryptoSoc-Workshop
 cd CryptoSoc-Workshop
 ```
 
-We've created a special [Truffle Box](/boxes) just for this tutorial called `truffle-workshop`, which includes the basic project structure as well as code for the user interface. Use the `truffle unbox` command to unpack this Truffle Box. You cn use this as a templates in hackathons or for ideas you may want to try out.
+We've created a special [Truffle Box](https://truffleframework.com/boxes) just for this tutorial called `truffle-workshop`, which includes the basic project structure as well as code for the user interface. Use the `truffle unbox` command to unpack this Truffle Box. You cn use this as a templates in hackathons or for ideas you may want to try out.
 
 ```sh
 truffle unbox CryptoSoc/truffle-workshop
@@ -50,7 +50,7 @@ truffle unbox CryptoSoc/truffle-workshop
 
 **Build and Run the App**
 
-Compile and migrate the smart contracts ([Read more about this](#Pet shop)). Make sure Ganache is open.
+Compile and migrate the smart contracts ([Read more about this](https://truffleframework.com/tutorials/pet-shop#compiling-and-migrating-the-smart-contract)). Make sure Ganache is open.
 
 ```sh
 truffle compile
