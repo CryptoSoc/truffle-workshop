@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/CryptoSoc/truffle-workshop.svg?branch=master)](https://travis-ci.org/CryptoSoc/truffle-workshop)
 
-In this workshop we will be taking a quick look at building a DApp, and then we will let you take over and build one yourself. 
+In this workshop we will be taking a quick look at building a DApp, and then we will let you take over and build one yourself.
 
 The challenge is, in your groups, identify an idea and implement an MVP DApp. Each member of the group must make at least 1 commit to the repo.
 
@@ -109,7 +109,7 @@ A few ideas that might inspire you:
 
 - Start by thinking of the problem and how you are going to solve it
 
-- Once your team has decided and agreed, think how the smart contract should look before even beginning coding. 
+- Once your team has decided and agreed, think how the smart contract should look before even beginning coding.
     - When writing smart contracts, most of your time should be spent on thinking about the contract and not coding it. The code is not long but the possibility for failure is in some ways greater than in regular programs. This is particularly necessary when the contract is financial.
     - More about [smart contract security](https://solidity.readthedocs.io/en/latest/security-considerations.html)
 
@@ -202,14 +202,14 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
 If you want to use events in your front end, Metamask is not currently sufficient - but there is a [bleeding edge solution](https://github.com/MetaMask/metamask-extension/pull/5458) to this which has very recently been merged. If you want to use events before Metamask is updated, try using the [Ethereum browser, Mist](https://github.com/ethereum/mist).
 
-Furthermore, there are some interesting issues with web3 as well, where sometimes things work one way and sometimes another. This seems to happen when changing between my local Ganache and Ropsten and might be explained by the divergent syntax of web3 [0.x.x](https://github.com/ethereum/wiki/wiki/JavaScript-API) and [1.x.x](https://web3js.readthedocs.io/en/1.0/web3-eth.html). 
+Furthermore, there are some interesting issues with web3 as well, where sometimes things work one way and sometimes another. This seems to happen when changing between my local Ganache and Ropsten and might be explained by the divergent syntax of web3 [0.x.x](https://github.com/ethereum/wiki/wiki/JavaScript-API) and [1.x.x](https://web3js.readthedocs.io/en/1.0/web3-eth.html).
 
 
 ## Deploying your DApp
 
 For the tweaks to the front-end that connect to Ropsten, see the [Ropsten branch](https://github.com/CryptoSoc/truffle-workshop/tree/ropsten).
 
-We'll look at how to deploy your smart contract to an Ethereum test network, which functions almost the exact same as the Mainnet, and how to connect your front end to it. For this part, we will be using [Heroku](https://www.heroku.com/) and the Ropsten testnet. 
+We'll look at how to deploy your smart contract to an Ethereum test network, which functions almost the exact same as the Mainnet, and how to connect your front end to it. For this part, we will be using [Heroku](https://www.heroku.com/) and the Ropsten testnet.
 
 ### Deploying your smart contract
 
@@ -217,11 +217,11 @@ Deploying your smart contract is actually fairly easy. You can simply copy the s
 
 #### Claim some Testnet ETH
 
-A testnet is a development environment. That means the ETH you have is worth nothing. If you don't need all of it, donate it back to a faucet. 
+A testnet is a development environment. That means the ETH you have is worth nothing. If you don't need all of it, donate it back to a faucet.
 
 To create any transaction on Ethereum, you will need some ETH to cover the gas costs. You can get some free testnet ETH from the links below - you only need 1 ETH.
 
-Don't send lots of transactions. We want you to try get the hang of participating in the Ethereum network and seeing what it's about but there are still maintainers who don't want to see all your spam transactions. In fact Ropsten was already DOS'ed. 
+Don't send lots of transactions. We want you to try get the hang of participating in the Ethereum network and seeing what it's about but there are still maintainers who don't want to see all your spam transactions. In fact Ropsten was already DOS'ed.
 
 Make sure Metamask is connected to the Ropsten testnet.
 
@@ -244,7 +244,7 @@ Click deploy like before, providing any constructor arguments your smart contrac
 
 The transaction will then have to be mined. This can take a little while if the network is busy but will be done within a minute.
 
-Once that is done, you will find the same debug information in the console. 
+Once that is done, you will find the same debug information in the console.
 
 ![Debug information](./img/ropsten_debug_info.png)
 
@@ -258,7 +258,7 @@ Now you can interact with your contract via the usual methods from Remix or any 
 
 ![Interact MyEtherWallet](./img/interact_mew.png)
 
-### Deploying your Front End
+### Deploying your Front End to Heroku
 
 To deploy your front end, we will use a simple platform-as-a-service called [Heroku](https://heroku.com). You can create one project for free as a hobbyist so go ahead and create an account.
 
@@ -300,3 +300,39 @@ git push heroku master
 A Procfile is a configuration file for Heroku. For our build, we don't need to specify this as the default for node is to run the application. If you require more complex build options you can add one.
 
 [See here](https://devcenter.heroku.com/articles/procfile)
+
+
+### Deploying to Github Pages
+
+Alternatively, if your site doesn't require any backend processing (is static) then you can host it on Github with [Github pages](https://pages.github.com/).
+
+Add `gh-pages` to your npm app:
+
+```bash
+cd client
+npm install gh-pages --save-dev
+```
+
+Add deployment scripts and a homepage address to your `package.json`. The homepage address must be in the form _your-github-username.github.io/repo-name_. For example, this project has the homepage [cryptosoc.github.io/truffle-workshop](https://cryptosoc.github.io/truffle-workshop).
+
+```json
+"homepage": "http://cryptosoc.github.io/truffle-workshop",
+"scripts": {
+  //...
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
+
+Then make sure you have a Github remote if you have not already added one, replacing the url below with your repo:
+
+```bash
+git remote add origin https://github.com/CryptoSoc/truffle-workshop.git
+```
+
+Then finally run:
+
+```bash
+cd client
+npm run deploy
+```
