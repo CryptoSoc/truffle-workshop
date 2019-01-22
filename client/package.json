@@ -1,7 +1,10 @@
 {
-  "name": "client",
+  "name": "TruffleDapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://cryptosoc.github.io/truffle-workshop",
+  "description": "An Ethereum DApp and tutorial for creating your own.",
+  "license": "MIT",
   "dependencies": {
     "bignumber.js": "^7.2.1",
     "bootstrap": "^3.3.7",
@@ -19,9 +22,12 @@
     "eject": "react-scripts eject",
     "link-contracts": "run-script-os",
     "link-contracts:linux:darwin": "cd src && ln -s ../../build/contracts contracts",
-    "link-contracts:win32": "cd src && mklink \\D contracts ..\\..\\build\\contracts"
+    "link-contracts:win32": "cd src && mklink \\D contracts ..\\..\\build\\contracts",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "run-script-os": "^1.0.3"
   }
 }
