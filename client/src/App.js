@@ -33,7 +33,7 @@ class App extends Component {
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance, signed: initialResponse });
+      this.setState({ web3: web3!==undefined, accounts: accounts, contract: instance, signed: initialResponse });
     } catch (error) {
       // Catch any errors for any of the above operations.
       console.log(error);
@@ -62,9 +62,6 @@ class App extends Component {
   render() {
     const { isLoading } = this.state;
 
-    if (!this.state.web3) {
-      return <div>Loading Web3, accounts, and contract. Make sure Metamask is unlocked and connected to the Ganache network.</div>;
-    }
     return (
       <div className="App">
 
@@ -96,6 +93,9 @@ class App extends Component {
               <p>
                 You haven't signed the register yet!
               </p>
+              {!this.state.web3 &&
+                <p style={{color: 'red'}}>Loading Web3, accounts, and contract. Make sure Metamask is unlocked and connected to the Ganache network.</p>
+              }
             </div>
           )}
 
