@@ -12,7 +12,7 @@ The rest of the tutorial will help set up a React DApp with Truffle.
 
 Thanks to [Pet-shop](https://github.com/truffle-box/pet-shop-box) and [react box](https://github.com/truffle-box/react-box).
 
-[See a Preview the Site](https://cryptosoc.github.io/truffle-workshop)
+[See a Preview of the Site](https://cryptosoc.github.io/truffle-workshop)
 
 ## How to Use this Box
 
