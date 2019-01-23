@@ -1,11 +1,16 @@
 {
-  "main.css": "static/css/main.7e06bfa6.css",
-  "main.css.map": "static/css/main.7e06bfa6.css.map",
-  "main.js": "static/js/main.ac7babf4.js",
-  "main.js.map": "static/js/main.ac7babf4.js.map",
-  "static/media/glyphicons-halflings-regular.eot": "static/media/glyphicons-halflings-regular.f4769f9b.eot",
-  "static/media/glyphicons-halflings-regular.svg": "static/media/glyphicons-halflings-regular.89889688.svg",
-  "static/media/glyphicons-halflings-regular.ttf": "static/media/glyphicons-halflings-regular.e18bbf61.ttf",
-  "static/media/glyphicons-halflings-regular.woff": "static/media/glyphicons-halflings-regular.fa277232.woff",
-  "static/media/glyphicons-halflings-regular.woff2": "static/media/glyphicons-halflings-regular.448c34a5.woff2"
+  "main.css": "/truffle-workshop/static/css/main.a113df0b.chunk.css",
+  "main.js": "/truffle-workshop/static/js/main.69398d30.chunk.js",
+  "main.js.map": "/truffle-workshop/static/js/main.69398d30.chunk.js.map",
+  "static/css/1.a2c9a3a0.chunk.css": "/truffle-workshop/static/css/1.a2c9a3a0.chunk.css",
+  "static/js/1.daa950c8.chunk.js": "/truffle-workshop/static/js/1.daa950c8.chunk.js",
+  "static/js/1.daa950c8.chunk.js.map": "/truffle-workshop/static/js/1.daa950c8.chunk.js.map",
+  "runtime~main.js": "/truffle-workshop/static/js/runtime~main.dca21ebe.js",
+  "runtime~main.js.map": "/truffle-workshop/static/js/runtime~main.dca21ebe.js.map",
+  "static/media/bootstrap.css": "/truffle-workshop/static/media/glyphicons-halflings-regular.f4769f9b.eot",
+  "static/css/main.a113df0b.chunk.css.map": "/truffle-workshop/static/css/main.a113df0b.chunk.css.map",
+  "static/css/1.a2c9a3a0.chunk.css.map": "/truffle-workshop/static/css/1.a2c9a3a0.chunk.css.map",
+  "index.html": "/truffle-workshop/index.html",
+  "precache-manifest.2b5c2419ea9c08aad477c8f097e5bca8.js": "/truffle-workshop/precache-manifest.2b5c2419ea9c08aad477c8f097e5bca8.js",
+  "service-worker.js": "/truffle-workshop/service-worker.js"
 }
