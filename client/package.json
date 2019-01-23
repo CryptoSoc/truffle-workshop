@@ -7,13 +7,13 @@
   "license": "MIT",
   "dependencies": {
     "bignumber.js": "^7.2.1",
-    "bootstrap": "^3.3.7",
-    "react": "^16.4.2",
+    "bootstrap": "^3.4.0",
+    "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",
-    "react-dom": "^16.4.2",
+    "react-dom": "^16.7.0",
     "react-scripts": "1.1.4",
-    "truffle-contract": "^4.0.0-next.0",
-    "web3": "^1.0.0-beta.35"
+    "truffle-contract": "^3.0.7",
+    "web3": "^1.0.0-beta.37"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,6 +28,6 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
-    "run-script-os": "^1.0.3"
+    "run-script-os": "^1.0.5"
   }
 }
