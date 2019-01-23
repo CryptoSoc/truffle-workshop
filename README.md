@@ -12,6 +12,7 @@ The rest of the tutorial will help set up a React DApp with Truffle.
 
 Thanks to [Pet-shop](https://github.com/truffle-box/pet-shop-box) and [react box](https://github.com/truffle-box/react-box).
 
+[See a Preview the Site](https://cryptosoc.github.io/truffle-workshop)
 
 ## How to Use this Box
 
@@ -303,6 +304,8 @@ A Procfile is a configuration file for Heroku. For our build, we don't need to s
 
 
 ### Deploying to Github Pages
+
+[See the Site](https://cryptosoc.github.io/truffle-workshop)
 
 Alternatively, if your site doesn't require any backend processing (is static) then you can host it on Github with [Github pages](https://pages.github.com/).
 
