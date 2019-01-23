@@ -12,7 +12,6 @@ module.exports = {
       port: 8545,
       network_id: "*"
     }
-
     // Add additional deployment envoironments here
     // e.g. Ropsten might look like
     // ropsten:  {
@@ -21,5 +20,10 @@ module.exports = {
     //   port:  8545,
     //   gas:   2900000
     // }
+  },
+  compilers: {
+    solc: {
+      version: "0.4.25",   // Change this to whatever you need
+    }
   }
 };
