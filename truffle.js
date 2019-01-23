@@ -12,5 +12,14 @@ module.exports = {
       port: 8545,
       network_id: "*"
     }
+
+    // Add additional deployment envoironments here
+    // e.g. Ropsten might look like
+    // ropsten:  {
+    //   network_id: 3,
+    //   host: "localhost",
+    //   port:  8545,
+    //   gas:   2900000
+    // }
   }
 };
